@@ -7,6 +7,9 @@ ENV LC_ALL              C.UTF-8
 ENV NODE_ENV            $NODE_ENV
 ENV NPM_CONFIG_LOGLEVEL warn
 
+RUN sed -i s@/deb.debian.org/@/mirrors.huaweicloud.com/@g /etc/apt/sources.list
+RUN sed -i s@/security.debian.org/@/mirrors.huaweicloud.com/@g /etc/apt/sources.list
+
 # Instal the 'apt-utils' package to solve the error 'debconf: delaying package configuration, since apt-utils is not installed'
 # https://peteris.rocks/blog/quiet-and-unattended-installation-with-apt-get/
 RUN apt-get update \

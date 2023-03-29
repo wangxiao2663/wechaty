@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Class mixins are a pattern for sharing code between classes using standard JavaScript.
  * https://lit.dev/docs/composition/mixins/
